@@ -1,0 +1,17 @@
+.product-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.image {
+  height: 50px;
+  margin-right: 10px;
+  width: 50px;
+}
+
+.info {
+  align-items: center;
+  display: flex;
+}

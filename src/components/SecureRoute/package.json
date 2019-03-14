@@ -1,0 +1,6 @@
+{
+  "name": "SecureRoute",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./SecureRoute.js"
+}

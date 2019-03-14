@@ -1,0 +1,20 @@
+export default {
+  dateFromMoreRecent: '"Date To" must be more recent than "Date From"',
+  invalidPhone: 'Phone number has a wrong format',
+  maxLength: 'This field must have a maximum of 252 characters.',
+  minLength: 'This field has to be at least 2 characters long.',
+  noSpecialChars: 'This field should not contain special characters.',
+  noSpecialCharsOrNumbers: 'This field should not contain special characters/numbers.',
+  password: {
+    confirmNoMatch: 'Password and Confirm Password do not match, please try again',
+    digit: 'This field must contain at least one digit.',
+    length: 'This field must contain at least 6 characters long',
+    lowerCase: 'This field must contain at least one lower case letter',
+    specialChars: 'This field must contain at least one of these special characters ~!@#$%^&*()_+.',
+    upperCase: 'This field must contain at least one upper case letter',
+    wrongPassword: 'Invalid password',
+  },
+  required: 'This field is required.',
+  invalidEmail: 'Email has a wrong format',
+  invalidEmailLength: 'Email has a wrong length',
+};

@@ -1,0 +1,6 @@
+{
+  "name": "PageSignIn",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PageSignIn.js"
+}

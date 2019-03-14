@@ -1,0 +1,35 @@
+@import 'styles/colors.scss';
+
+.header {
+  color: $primary-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.tool-bar {
+  background-color: $secondary-blue;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  &-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40px;
+  }
+
+  &-text {
+    font-size: 1.5em;
+  }
+}
+
+.login {
+  align-items: flex-end;
+}

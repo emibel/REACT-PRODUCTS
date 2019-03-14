@@ -1,0 +1,16 @@
+@import 'styles/colors.scss';
+
+.login-container {
+  align-items: center;
+  color: $primary-white;
+  display: flex;
+  margin-left: auto;
+}
+
+.avatar {
+  margin-right: 10px;
+}
+
+.display-name {
+  color: $primary-white;
+}

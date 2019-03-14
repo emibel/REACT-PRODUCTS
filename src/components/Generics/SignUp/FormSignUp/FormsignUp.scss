@@ -1,0 +1,18 @@
+
+.form {
+  padding: 10px;
+}
+
+.field {
+  margin-bottom: 20px !important;
+
+  &--password {
+    margin-bottom: 30px;
+  }
+}
+
+.submit {
+  margin: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}

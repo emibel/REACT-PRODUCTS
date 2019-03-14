@@ -1,0 +1,28 @@
+@import 'styles/colors.scss';
+
+.facebook-icon {
+  height: 20px;
+  width: 40px;
+  background-color: $facebook-blue;
+}
+
+.button {
+  background-color: $facebook-blue;
+  border: none;
+  color: $primary-white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 17px;
+}
+
+.button-logout {
+  background-color: $facebook-blue;
+  border: none;
+  color: $primary-white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 17px;
+  height: 40px;
+}

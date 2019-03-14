@@ -1,0 +1,13 @@
+
+.page {
+  text-align: center;
+}
+
+.page-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.column {
+  max-width: 400px !important;
+}

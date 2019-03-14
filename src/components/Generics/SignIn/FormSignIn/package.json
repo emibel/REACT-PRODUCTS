@@ -1,0 +1,6 @@
+{
+  "name": "FormSignIn",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./FormSignIn.js"
+}
