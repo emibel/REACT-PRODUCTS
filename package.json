@@ -22,6 +22,8 @@
     "css-loader": "0.28.7",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
     "eslint": "4.10.0",
     "eslint-config-react-app": "^2.1.0",
     "eslint-loader": "1.9.0",
@@ -75,9 +77,14 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
+  "jestWebpackResolver": {
+    "webpackConfig": "./config/webpack.config.dev.js"
+  },
   "jest": {
+    "collectCoverage": true,
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
+      "src/**/*.{js,jsx,mjs}",
+      "!src/styles/assets/React App_files/sdk.js"
     ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
@@ -96,9 +103,6 @@
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
     ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
     "moduleFileExtensions": [
       "web.js",
       "js",
@@ -107,7 +111,14 @@
       "jsx",
       "node",
       "mjs"
-    ]
+    ],
+    "modulePaths": [
+      "src"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "resolver": "jest-webpack-resolver"
   },
   "babel": {
     "presets": [
@@ -118,6 +129,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "babel-plugin-transform-decorators-legacy": "^1.3.5"
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "jest-webpack-resolver": "^0.3.0"
   }
 }

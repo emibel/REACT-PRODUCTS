@@ -86,10 +86,10 @@ module.exports = {
     alias: {
       api: `${paths.appSrc}/api`,
       styles: `${paths.appSrc}/styles`,
-      classes: `${paths.appSrc}/classes`,
-      UI: `${paths.appSrc}/components/UI`,
       assets: `${paths.appSrc}/styles/assets`,
+      classes: `${paths.appSrc}/classes`,
       components: `${paths.appSrc}/components`,
+      UI: `${paths.appSrc}/components/UI`,
       constants: `${paths.appSrc}/constants`,
       containers: `${paths.appSrc}/containers`,
       generics: `${paths.appSrc}/components/Generics`,
