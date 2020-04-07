@@ -1,0 +1,38 @@
+{
+    "products": [
+        {
+            "image": "",
+            "name": "Lv Smatr TV 4k Andoid TV",
+            "price": 40000,
+            "_id": "00001"
+        },
+        {
+            "image": "",
+            "name": "Audio device Sony",
+            "price": 60000,
+            "_id": "00002"
+        },
+        {
+            "image": "",
+            "name": "Macbook Pro",
+            "price": 240000,
+            "_id": "00003"
+        },
+        {
+            "image": "",
+            "name": "Hp Notebook",
+            "price": 90000,
+            "_id": "00004"
+        }
+    ],
+    "signIn": [
+        {
+            "displayName": "Emiliano Belvedere",
+            "email": "emibel@gmail.com",
+            "_id": "emibel",
+            "password": "Test.123",
+            "photo": "PropTypes.string",
+            "token": "PLOKM·45&%$1º23$"
+        }
+    ]
+}

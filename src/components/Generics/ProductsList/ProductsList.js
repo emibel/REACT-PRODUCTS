@@ -1,39 +1,37 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react';
 
-import ProductListItem from 'generics/ProductListItem';
+import PropTypes from 'prop-types';
 import { PRODUCTS } from 'constants/props';
 
+import ProductListItem from 'generics/ProductListItem';
+
 import List from 'UI/List';
-// import styles from './ProductsList.scss';
 
 const propTypes = {
-  products: PRODUCTS
+  products: PRODUCTS,
+  fetchProducts: PropTypes.func.isRequired,
 }
 
 const defaultProps = {
   products: []
 }
 
-class ProductsList extends Component {
+const ProductsList = ({products, fetchProducts}) => {
 
-  componentDidMount() {
-    this.props.fetchProducts();
-  }
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
-  render() {
-    const { products } = this.props;
-
-    return (
-      <List>
-        {products.map( product =>
-          <ProductListItem
-            key={product._id}
-            product={product}
-          />
-        )}
-      </List>
-    );
-  }
+  return (
+    <List>
+      {products.map( product =>
+        <ProductListItem
+          key={product._id}
+          product={product}
+        />
+      )}
+    </List>
+  );
 }
 
 ProductsList.propTypes=propTypes;

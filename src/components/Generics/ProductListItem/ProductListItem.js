@@ -18,6 +18,7 @@ const defaultProps = {
 }
 
 const ProductListItem = ({product, className}) => (
+
   <ListItem className={classnames(styles['product-list-item'], className)}>
     <div className={styles.info}>
       <img src={product.image || productDefault } className={styles.image} alt="pro-img"/>
@@ -25,6 +26,7 @@ const ProductListItem = ({product, className}) => (
     </div>
     <div key={`price-${product._id}`}>{currency(product.price)}</div>
   </ListItem>
+
 )
 
 ProductListItem.propTypes = propTypes;

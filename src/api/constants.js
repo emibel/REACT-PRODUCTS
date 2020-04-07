@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:8100/api';
+export const BASE_URL = 'http://localhost:8001';
 
 const HEADERS = {
   'Content-Type': 'application/json',

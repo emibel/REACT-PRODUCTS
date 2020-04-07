@@ -29,11 +29,11 @@ export const fetchSignIn = formData => {
 
     return api.login.fetchSignIn(formData)
       .then( response => {
-        const user = response && {
-          id: response._id,
-          email: response.email,
-          displayName: response.displayName,
-          token: response.token,
+        const user = response && response[0] && {
+          id: response[0]._id,
+          email: response[0].email,
+          displayName: response[0].displayName,
+          token: response[0].token,
         }
         dispatch(fetchSignInSuccess(user));
         setAuthorizationToken(user.token);
