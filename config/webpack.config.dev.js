@@ -4,6 +4,7 @@ const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
@@ -25,7 +26,10 @@ const env = getClientEnvironment(publicUrl);
 // This is the development configuration.
 // It is focused on developer experience and fast rebuilds.
 // The production configuration is different and lives in a separate file.
+
 module.exports = {
+  context: paths.appSrc,
+  mode: "development",
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
   // See the discussion in https://github.com/facebookincubator/create-react-app/issues/343.
   devtool: 'cheap-module-source-map',
@@ -173,8 +177,9 @@ module.exports = {
               {
                 loader: require.resolve('css-loader'),
                 options: {
-                  modules: true,
-                  localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
+                  modules: {
+                    localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
+                  },
                   importLoaders: 1,
                 },
               },
@@ -231,11 +236,15 @@ module.exports = {
     // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     // In development, this will be an empty string.
     // Generates an `index.html` file with the <script> injected.
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      include:['main','vendor']
+    }),
     new HtmlWebpackPlugin({
       inject: true,
       template: paths.appHtml,
     }),
-    new InterpolateHtmlPlugin(env.raw),
+    new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
     // Add module names to factory functions so they appear in browser profiler.
     new webpack.NamedModulesPlugin(),
     // Makes some environment variables available to the JS code, for example:

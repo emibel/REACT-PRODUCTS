@@ -20,10 +20,6 @@ const Menu = ({className, menuItems, toogleItem}) => {
   };
 
   const handleClose = event => {
-    if (this.anchorEl.contains(event.target)) {
-      return;
-    }
-
     setOpen(false);
   };
 
@@ -35,16 +31,13 @@ const Menu = ({className, menuItems, toogleItem}) => {
   return (
     <div className={className}>
       <Button
-        buttonRef={node => {
-          this.anchorEl = node;
-        }}
         aria-owns={open ? 'menu-list-grow' : undefined}
         aria-haspopup="true"
         onClick={handleToggle}
       >
         {toogleItem}
       </Button>
-      <Popper open={open} anchorEl={this.anchorEl} transition disablePortal>
+      <Popper open={open} transition disablePortal>
         {({ TransitionProps, placement }) => (
           <Grow
             {...TransitionProps}
