@@ -37,7 +37,7 @@
     "html-webpack-plugin": "^4.0.0-beta.14",
     "jest": "25.5.3",
     "lodash": "^4.17.15",
-    "node-sass": "4.14.0",
+    "node-sass": "7.0.0",
     "object-assign": "4.1.1",
     "pick-react-known-prop": "^0.1.5",
     "postcss-flexbugs-fixes": "3.2.0",
